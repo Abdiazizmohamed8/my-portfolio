@@ -1,132 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abdiaziz Mohamed Abdi - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
+
   <!-- Navbar -->
   <nav>
     <div class="logo"><i class="fas fa-user-circle"></i> Abdiaziz Mohamed Abdi</div>
-    <div class="hamburger"><i class="fas fa-bars"></i></div>
-    <ul>
-      <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="#about"><i class="fas fa-user"></i> About Me</a></li>
-      <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>
-      <li><a href="#projects"><i class="fas fa-folder-open"></i> Projects</a></li>
-      <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
-      <li><a href="#soft-skills"><i class="fas fa-handshake"></i> Soft Skills</a></li>
-      <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    <ul class="nav-list">
+      <li><a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a></li>
+      <li><a href="#skills" class="nav-link"><i class="fas fa-tools"></i> Skills</a></li>
+      <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a></li>
+      <li><a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i> Experience</a></li>
+      <li><a href="#softskills" class="nav-link"><i class="fas fa-handshake"></i> Soft Skills</a></li>
+      <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Section (Home) -->
+  <!-- Hero Section -->
   <section id="home">
     <div class="hero">
-      <img src="caska.jpg" alt="Profile Photo">
-      <h1>Abdiaziz Mohamed Abdi</h1>
-      <p>Front-End Developer | Aspiring Full-Stack Developer</p>
-      <a href="#contact" class="btn"><i class="fas fa-paper-plane"></i> Contact Me</a>
+      <img src="caska.jpg" alt="Abdiaziz Mohamed Abdi" class="hero-img">
+      <h1 class="hero-name">Abdiaziz Mohamed Abdi</h1>
+      <p class="hero-title">Front-End Developer | Aspiring Full-Stack Developer</p>
+      <a href="#contact" class="btn-contact"><i class="fas fa-paper-plane"></i> Contact Me</a>
     </div>
   </section>
 
-  <!-- About Me (No Image) -->
+  <!-- About Section -->
   <section id="about">
-    <div class="info">
-      <h2><i class="fas fa-id-card"></i> About Me</h2>
-      <p>I am a passionate and dedicated Front-End Developer with a strong foundation in web development and a keen
-        interest in creating responsive, user-friendly, and visually appealing websites. Currently pursuing a Bachelor’s
-        degree in Computer Science at Jamhruiya University of Science and Technology and expanding my skills in Backend
-        development to become a Full-Stack Developer. I enjoy solving problems, learning new technologies, and
-        contributing to projects that make a positive impact.</p>
-    </div>
+    <h2>About Me</h2>
+    <p>
+      I am a passionate and results-driven <strong>Front-End Developer</strong> with a solid foundation in HTML, CSS, and JavaScript. 
+      Currently pursuing a <strong>Bachelor’s degree in Computer Science</strong> at Jamhruiya University of Science and Technology, 
+      I am actively learning <strong>Back-End development</strong> to expand my skills toward becoming a proficient Full-Stack Developer. 
+      I excel in building <strong>responsive, user-friendly, and visually appealing websites</strong>, enjoy tackling complex problems, 
+      and thrive in collaborative team environments. My goal is to create <strong>high-quality applications</strong> that deliver real value 
+      and enhance the overall user experience.
+    </p>
   </section>
 
-  <!-- Skills -->
+  <!-- Skills Section -->
   <section id="skills">
-    <h2><i class="fas fa-tools"></i> My Skills</h2>
-    <div class="skill"><span><i class="fab fa-html5"></i> HTML - 100%</span>
-      <div class="skill-bar"><div data-width="100%"></div></div>
+    <h2>My Skills</h2>
+    <div class="skill">
+      <span>HTML - 100%</span>
+      <div class="skill-bar">
+        <div data-width="100%"></div>
+      </div>
     </div>
-    <div class="skill"><span><i class="fab fa-css3-alt"></i> CSS - 100%</span>
-      <div class="skill-bar"><div data-width="100%"></div></div>
+    <div class="skill">
+      <span>CSS - 100%</span>
+      <div class="skill-bar">
+        <div data-width="100%"></div>
+      </div>
     </div>
-    <div class="skill"><span><i class="fab fa-js"></i> JavaScript - 99%</span>
-      <div class="skill-bar"><div data-width="99%"></div></div>
+    <div class="skill">
+      <span>JavaScript - 99%</span>
+      <div class="skill-bar">
+        <div data-width="99%"></div>
+      </div>
     </div>
-    <div class="skill"><span><i class="fas fa-server"></i> Learning Express & Node.js</span>
-      <div class="skill-bar"><div data-width="40%"></div></div>
+    <div class="skill">
+      <span>Learning Node.js & Express</span>
+      <div class="skill-bar">
+        <div data-width="40%"></div>
+      </div>
     </div>
   </section>
 
-  <!-- Projects -->
+  <!-- Projects Section -->
   <section id="projects">
-    <h2><i class="fas fa-diagram-project"></i> My Projects</h2>
-    <div class="project"><i class="fas fa-school"></i><strong>School Management System</strong>
-      <div class="desc">Manage students, teachers, classes, and grades easily.</div>
+    <h2>Projects</h2>
+    <div class="project">
+      <strong>School Management</strong>
+      <p>Manage students, teachers, classes, and grades efficiently.</p>
     </div>
-    <div class="project"><i class="fas fa-money-bill-wave"></i><strong>Small Accounting Business</strong>
-      <div class="desc">Web app for managing sales and expenses for small businesses.</div>
+    <div class="project">
+      <strong>Small Accounting</strong>
+      <p>Manage sales and expenses for small businesses.</p>
     </div>
-    <div class="project"><i class="fas fa-coffee"></i><strong>Cafeteria Web</strong>
-      <div class="desc">Online ordering and management for cafeteria.</div>
+    <div class="project">
+      <strong>Cafeteria Web</strong>
+      <p>Online ordering and management for cafeteria.</p>
     </div>
-    <div class="project"><i class="fas fa-hospital"></i><strong>Hospital Management System</strong>
-      <div class="desc">Manage hospital operations, appointments, patients, and staff.</div>
+    <div class="project">
+      <strong>Hospital Management</strong>
+      <p>Manage hospital operations, appointments, patients, and staff.</p>
     </div>
   </section>
 
-  <!-- Experience -->
+  <!-- Experience Section -->
   <section id="experience">
-    <h2><i class="fas fa-briefcase"></i> Experience</h2>
-    <div class="item"><i class="fas fa-code"></i> Front-End: HTML, CSS, JS
-      <div class="desc">Build responsive and interactive websites.</div>
+    <h2>Experience</h2>
+    <div class="exp-item">
+      <strong>Front-End:</strong> HTML, CSS, JS
+      <p>Build responsive and interactive websites.</p>
     </div>
-    <div class="item"><i class="fas fa-server"></i> Learning Back-End
-      <div class="desc">Develop server-side logic and APIs.</div>
+    <div class="exp-item">
+      <strong>Back-End Learning</strong>
+      <p>Develop server-side logic and APIs.</p>
     </div>
-    <div class="item"><i class="fas fa-layer-group"></i> Learning Full-Stack
-      <div class="desc">Combine front-end and back-end to make apps.</div>
+    <div class="exp-item">
+      <strong>Full-Stack Learning</strong>
+      <p>Combine front-end and back-end to develop full applications.</p>
     </div>
   </section>
 
-  <!-- Soft Skills -->
-  <section id="soft-skills">
-    <h2><i class="fas fa-handshake"></i> Soft Skills</h2>
-    <div class="item"><i class="fas fa-comments"></i> Strong Communication</div>
-    <div class="item"><i class="fas fa-lightbulb"></i> Problem Solving</div>
-    <div class="item"><i class="fas fa-users"></i> Teamwork & Collaboration</div>
-    <div class="item"><i class="fas fa-running"></i> Adaptability & Quick Learning</div>
-    <div class="item"><i class="fas fa-clock"></i> Time Management</div>
+  <!-- Soft Skills Section -->
+  <section id="softskills">
+    <h2>Soft Skills</h2>
+    <div class="skill-item">Communication</div>
+    <div class="skill-item">Problem Solving</div>
+    <div class="skill-item">Teamwork</div>
+    <div class="skill-item">Adaptability</div>
+    <div class="skill-item">Time Management</div>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact Section -->
   <section id="contact">
-    <h2><i class="fas fa-envelope-open-text"></i> Contact Me</h2>
-    <form action="https://formsubmit.co/abdiazizmohdabdi@gmail.com" method="POST" id="contactForm">
+    <h2>Contact Me</h2>
+    <form action="https://formsubmit.co/abdiazizmohdabdi@gmail.com" method="POST">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://abdi-aziz.vercel.app/thankyou.html">
       <input type="text" name="name" placeholder="Name" required>
       <input type="email" name="email" placeholder="Email" required>
       <textarea name="message" placeholder="Message" rows="5" required></textarea>
-      <button type="submit"><i class="fas fa-paper-plane"></i> Send</button>
+      <button type="submit">Send</button>
     </form>
   </section>
 
   <!-- Footer -->
   <footer>
-    <div class="social">
-      <a href="https://github.com/Abdiazizmohamed8/Caska4" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/abdiazizmohamed" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://wa.me/252615821483" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <p>&copy; 2025 Abdiaziz Mohamed Abdi.</p>
+    <div class="socials">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
       <a href="#"><i class="fab fa-facebook"></i></a>
     </div>
-    <p>&copy; 2025 Abdiaziz Mohamed Abdi.</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,42 +1,47 @@
-// Hamburger Toggle
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector("nav ul");
-hamburger.addEventListener("click", () => navMenu.classList.toggle("show"));
+// Hamburger Menu Toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navList = document.querySelector('.nav-list');
 
-// Smooth Scroll
-const navLinks = document.querySelectorAll('nav ul li a');
-navLinks.forEach(link => link.addEventListener('click', e => {
-  e.preventDefault();
-  navMenu.classList.remove("show");
-  document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth', block: 'start' });
-}));
+menuToggle.addEventListener('click', () => {
+  navList.classList.toggle('show');
+});
 
-// Skill Bars Animation
-const skillBars = document.querySelectorAll(".skill-bar div");
-function animateSkills() {
-  skillBars.forEach(bar => {
-    const rect = bar.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
-      bar.style.width = bar.getAttribute("data-width");
+// Close mobile menu on link click (instant scroll)
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (navList.classList.contains('show')) {
+      navList.classList.remove('show');
     }
   });
-}
-window.addEventListener("scroll", animateSkills);
-window.addEventListener("load", animateSkills);
+});
 
-// Navbar Active Link
-const sections = document.querySelectorAll("section");
-window.addEventListener("scroll", () => {
-  let current = "";
+// Active nav link on scroll
+const sections = document.querySelectorAll('section');
+
+window.addEventListener('scroll', () => {
+  let current = '';
   sections.forEach(section => {
     const sectionTop = section.offsetTop - 90;
-    const sectionHeight = section.offsetHeight;
-    if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
-      current = section.getAttribute("id");
+    if (scrollY >= sectionTop) {
+      current = section.getAttribute('id');
     }
   });
+
   navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href").substring(1) === current) link.classList.add("active");
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${current}`) {
+      link.classList.add('active');
+    }
   });
+
+  // Animate skill bars when skills section is visible
+  const skillsSection = document.getElementById('skills');
+  const skillsTop = skillsSection.offsetTop - window.innerHeight + 100;
+  if (scrollY >= skillsTop) {
+    const skillBars = document.querySelectorAll('.skill-bar div');
+    skillBars.forEach(bar => {
+      bar.style.width = bar.getAttribute('data-width');
+    });
+  }
 });
