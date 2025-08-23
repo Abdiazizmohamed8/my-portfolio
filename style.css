@@ -1,3 +1,4 @@
+/* Global */
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +9,7 @@
 body {
   background: #0c142b;
   color: #fff;
-  line-height: 1.6;
+  line-height: 1.8;
   overflow-x: hidden;
 }
 
@@ -26,7 +27,7 @@ section {
 
 h2 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   color: #00d4ff;
   font-size: clamp(1.5rem, 2vw, 2rem);
 }
@@ -65,7 +66,7 @@ nav ul li a {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 5px 10px;
+  padding: 5px 12px;
   border-radius: 5px;
   transition: 0.3s;
 }
@@ -90,54 +91,90 @@ nav ul.show {
   flex-direction: column;
   width: 100%;
   text-align: center;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 12px;
+  margin-top: 12px;
 }
 
-/* About */
-#about {
+/* Hero Section */
+#home {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 40px;
+  text-align: center;
+  height: 100vh;
+  gap: 30px; /* space u dhexeeya img, h1, p, button */
+  background: linear-gradient(135deg, #0c142b 0%, #111831 100%);
+  padding-top: 60px; /* space for sticky navbar */
 }
 
-#about img {
+#home img {
   border-radius: 50%;
   width: clamp(150px, 20vw, 200px);
   height: clamp(150px, 20vw, 200px);
   object-fit: cover;
   border: 3px solid #00d4ff;
-  margin: auto;
 }
 
+#home h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #00d4ff;
+  margin-bottom: 12px; /* space ka horeeya paragraph */
+}
+
+#home p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #fff;
+  max-width: 600px;
+  margin-bottom: 20px; /* space u dhexeeya paragraph iyo button */
+}
+
+#home .btn {
+  padding: 12px 25px;
+  background: #00d4ff;
+  color: #111831;
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* space u dhexeeya icon iyo text */
+  transition: 0.3s;
+}
+
+#home .btn:hover {
+  background: #00ffab;
+}
+
+/* About Section */
 #about .info {
-  flex: 1;
-  min-width: 250px;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px 10px;
 }
 
 #about .info p {
-  margin-bottom: 15px;
-  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  margin-top: 20px;
+  line-height: 1.8;
 }
 
 /* Skills */
 .skill {
-  margin-bottom: 12px;
+  margin-bottom: 18px;
   max-width: 500px;
-  margin: auto;
+  margin: 0 auto 20px auto;
 }
 
 .skill span {
   display: inline-block;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   font-size: 0.95rem;
   color: #ddd;
 }
 
 .skill-bar {
-  height: 6px;
-  border-radius: 4px;
+  height: 8px;
+  border-radius: 5px;
   background: #222;
   overflow: hidden;
 }
@@ -146,19 +183,19 @@ nav ul.show {
   height: 100%;
   width: 0;
   background: #00d4ff;
-  border-radius: 4px;
+  border-radius: 5px;
   transition: width 1.6s ease;
 }
 
 /* Projects */
 #projects .project {
   background: #111831;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  padding: 22px;
+  border-radius: 12px;
+  margin-bottom: 25px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   transition: 0.3s;
   cursor: pointer;
 }
@@ -170,7 +207,7 @@ nav ul.show {
 }
 
 #projects .desc {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #ccc;
   margin-top: 5px;
 }
@@ -182,21 +219,21 @@ nav ul.show {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
   text-align: center;
 }
 
 #experience .item,
 #soft-skills .item {
   background: #111831;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 22px;
+  border-radius: 12px;
   width: 100%;
   max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   transition: 0.3s;
   cursor: pointer;
 }
@@ -208,7 +245,7 @@ nav ul.show {
 }
 
 #experience .item .desc {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #ccc;
 }
 
@@ -216,23 +253,23 @@ nav ul.show {
 #contact form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 18px;
   max-width: 500px;
   margin: auto;
 }
 
 #contact input,
 #contact textarea {
-  padding: 10px;
+  padding: 12px;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   font-size: 1rem;
 }
 
 #contact button {
-  padding: 10px;
+  padding: 12px;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   background: #00d4ff;
   color: #111831;
   font-weight: bold;
@@ -251,7 +288,7 @@ nav ul.show {
 footer {
   background: #111831;
   text-align: center;
-  padding: 30px 20px;
+  padding: 35px 20px;
   color: #00d4ff;
 }
 
@@ -260,22 +297,22 @@ footer a {
 }
 
 footer .social {
-  margin-top: 10px;
+  margin-top: 15px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
 }
 
 footer .social a {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 /* Media Queries */
 @media(max-width:1024px) {
   #about {
-    flex-direction: column;
     text-align: center;
+    padding: 50px 15px;
   }
 }
 
@@ -298,5 +335,18 @@ footer .social a {
 
   h2 {
     font-size: 1.5rem;
+  }
+
+  #home h1 {
+    font-size: 2rem;
+  }
+
+  #home p {
+    font-size: 1rem;
+    max-width: 280px;
+  }
+
+  #contact form {
+    gap: 15px;
   }
 }

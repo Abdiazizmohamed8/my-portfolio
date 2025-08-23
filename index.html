@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abdiaziz Mohamed Abdi - Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <!-- Navbar -->
@@ -14,6 +13,7 @@
     <div class="logo"><i class="fas fa-user-circle"></i> Abdiaziz Mohamed Abdi</div>
     <div class="hamburger"><i class="fas fa-bars"></i></div>
     <ul>
+      <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
       <li><a href="#about"><i class="fas fa-user"></i> About Me</a></li>
       <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>
       <li><a href="#projects"><i class="fas fa-folder-open"></i> Projects</a></li>
@@ -23,9 +23,18 @@
     </ul>
   </nav>
 
-  <!-- About Me -->
+  <!-- Hero Section (Home) -->
+  <section id="home">
+    <div class="hero">
+      <img src="caska.jpg" alt="Profile Photo">
+      <h1>Abdiaziz Mohamed Abdi</h1>
+      <p>Front-End Developer | Aspiring Full-Stack Developer</p>
+      <a href="#contact" class="btn"><i class="fas fa-paper-plane"></i> Contact Me</a>
+    </div>
+  </section>
+
+  <!-- About Me (No Image) -->
   <section id="about">
-    <img src="caska.jpg" alt="Profile Photo">
     <div class="info">
       <h2><i class="fas fa-id-card"></i> About Me</h2>
       <p>I am a passionate and dedicated Front-End Developer with a strong foundation in web development and a keen
@@ -97,15 +106,14 @@
   <!-- Contact -->
   <section id="contact">
     <h2><i class="fas fa-envelope-open-text"></i> Contact Me</h2>
-  <form action="https://formsubmit.co/abdiazizmohdabdi@gmail.com" method="POST" id="contactForm">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://abdi-aziz.vercel.app/thankyou.html">
-  <input type="text" name="name" placeholder="Name" required>
-  <input type="email" name="email" placeholder="Email" required>
-  <textarea name="message" placeholder="Message" rows="5" required></textarea>
-  <button type="submit"><i class="fas fa-paper-plane"></i> Send</button>
-</form>
-
+    <form action="https://formsubmit.co/abdiazizmohdabdi@gmail.com" method="POST" id="contactForm">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://abdi-aziz.vercel.app/thankyou.html">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Message" rows="5" required></textarea>
+      <button type="submit"><i class="fas fa-paper-plane"></i> Send</button>
+    </form>
   </section>
 
   <!-- Footer -->
